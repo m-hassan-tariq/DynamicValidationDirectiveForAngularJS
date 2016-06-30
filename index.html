@@ -1,0 +1,56 @@
+﻿<link href="Content/bootstrap.css" rel="stylesheet" />
+<script src="Scripts/lib/angular/angular.js"></script>
+<script src="Scripts/app/appModule.js"></script>
+<script src="Scripts/app/appController.js"></script>
+<script src="Scripts/app/appDirective.js"></script>
+
+<html>
+<body ng-app="sampleApp" class="ng-cloak">
+    <div ng-controller="HomeController as vm">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <div class="col-sm-12" style="height: 200px"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="radio">
+                        <label><input type="radio" ng-model="vm.page.radio" value="" ng-change='vm.resetTextBox("Allow everything")' /> Allow everything</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="radio">
+                        <label><input type="radio" ng-model="vm.page.radio" value="[^a-zA-Z]" ng-change='vm.resetTextBox("Allow text only")' /> Text only</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="radio">
+                        <label><input type="radio" ng-model="vm.page.radio" value="[^0-9-]" ng-change='vm.resetTextBox("Allow numbers only")' /> Numbers only</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="radio">
+                        <label><input type="radio" ng-model="vm.page.radio" value="[^_@./#&+-]" ng-change='vm.resetTextBox("Allow special character only")' /> Special character only (charachters allowed are : _@./#&+-)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Input here:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="data" ng-model="vm.page.text" validate criteria="vm.page.radio" placeholder="{{vm.placeHolderText}}">
+                </div>
+            </div>
+        </form>
+        <div id="footer">
+            <div class="container">
+                <span class="pull-right text-info credit"> Muhammad Hassan - <a href="https://hassantariqblog.wordpress.com" target="_blank">Website</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
