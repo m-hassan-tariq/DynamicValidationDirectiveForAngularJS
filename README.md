@@ -51,4 +51,7 @@ Angular Code:
     
     })();
 
-![2016-07-01 14_03_20-mozilla firefox](https://cloud.githubusercontent.com/assets/10474169/16531999/d6f33c24-3f94-11e6-8d9d-b34c65ef71f9.png)
+Output: 
+
+![2016-07-01 14_07_02-mozilla firefox](https://cloud.githubusercontent.com/assets/10474169/16532053/1cdc509a-3f95-11e6-97b1-c221e3292959.png)
+
